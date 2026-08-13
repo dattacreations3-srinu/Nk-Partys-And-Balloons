@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NK Partys and Balloons</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <h4 class="brand">
+                NK Partys & Balloons
+            </h4>
+
+            <div class="desktop-nav">
+
+                <span onclick="scrollToSection('hero')">
+                    Home
+                </span>
+
+                <span onclick="scrollToSection('about')">
+                    About
+                </span>
+
+                <span onclick="scrollToSection('services')">
+                    Services
+                </span>
+
+                <span onclick="scrollToSection('gallery')">
+                    Gallery
+                </span>
+
+                <span onclick="scrollToSection('contact')">
+                    Contact
+                </span>
+
+            </div>
+
+            <button
+                class="mobile-menu-button"
+                onclick="toggleMobileMenu()"
+                aria-label="Open menu"
+            >
+                <i data-lucide="menu"></i>
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <div id="mobile-menu" class="mobile-menu hidden">
+
+            <span onclick="mobileNavigate('hero')">
+                Home
+            </span>
+
+            <span onclick="mobileNavigate('about')">
+                About
+            </span>
+
+            <span onclick="mobileNavigate('services')">
+                Services
+            </span>
+
+            <span onclick="mobileNavigate('gallery')">
+                Gallery
+            </span>
+
+            <span onclick="mobileNavigate('contact')">
+                Contact
+            </span>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="hero" class="hero">
+
+        <div id="hero-slides"></div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <h1 class="hero-title fade-in">
+                NK Partys and Balloons
+            </h1>
+
+            <p class="hero-subtitle fade-in">
+                Making your special moments beautiful, memorable and unforgettable.
+            </p>
+
+            <div class="hero-buttons fade-in">
+
+                <button
+                    class="primary-button"
+                    onclick="scrollToSection('services')"
+                >
+                    Explore Decorations
+                </button>
+
+                <button
+                    class="secondary-button"
+                    onclick="scrollToSection('contact')"
+                >
+                    Contact Us
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats-section">
+
+        <div class="stats-container">
+
+            <div class="stat-card float-anim fade-in">
+                <div
+                    class="counter"
+                    data-count="500"
+                >
+                    0
+                </div>
+
+                <p>
+                    Happy Customers
+                </p>
+            </div>
+
+
+            <div class="stat-card float-anim fade-in">
+                <div
+                    class="counter"
+                    data-count="350"
+                >
+                    0
+                </div>
+
+                <p>
+                    Events Completed
+                </p>
+            </div>
+
+
+            <div class="stat-card float-anim fade-in">
+                <div
+                    class="counter"
+                    data-count="120"
+                >
+                    0
+                </div>
+
+                <p>
+                    Decoration Designs
+                </p>
+            </div>
+
+
+            <div class="stat-card float-anim fade-in">
+                <div
+                    class="counter"
+                    data-count="5"
+                >
+                    0
+                </div>
+
+                <p>
+                    Years Experience
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="section">
+
+        <div class="about-container">
+
+            <div class="about-content fade-in">
+
+                <h2>
+                    About NK Partys & Balloons
+                </h2>
+
+                <p>
+                    We create beautiful decorations for birthdays, weddings,
+                    engagements, house warmings, baby showers and many other
+                    special occasions.
+                </p>
+
+                <p>
+                    Our goal is to transform your celebrations into beautiful
+                    memories with creative decoration ideas and professional
+                    service.
+                </p>
+
+            </div>
+
+
+            <div class="about-image-container fade-in">
+
+                <img
+                    src="https://i.ibb.co/v4zCrpws/Whats-App-Image-2026-05-22-at-11-48-29-AM.jpg"
+                    alt="NK Partys and Balloons Decoration"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services" class="section">
+
+        <div class="section-heading">
+
+            <h2>
+                Our Decorations
+            </h2>
+
+            <p>
+                Explore our decoration categories and select the design you like.
+            </p>
+
+        </div>
+
+
+        <div
+            id="services-grid"
+            class="services-grid"
+        ></div>
+
+    </section>
+
+
+    <!-- ================= GALLERY ================= -->
+
+    <section id="gallery" class="section">
+
+        <div class="section-heading">
+
+            <h2>
+                Decoration Gallery
+            </h2>
+
+            <p>
+                Choose your favourite decoration and send us your booking details.
+            </p>
+
+        </div>
+
+
+        <div
+            id="gallery-grid"
+            class="gallery-grid"
+        ></div>
+
+    </section>
+
+
+    <!-- ================= SERVICE MODAL ================= -->
+
+    <div
+        id="service-modal"
+        class="modal hidden"
+    >
+
+        <div class="modal-inner">
+
+            <div class="modal-header">
+
+                <h3 id="modal-title">
+                    Decoration
+                </h3>
+
+                <button
+                    onclick="closeModal()"
+                    class="close-button"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                id="modal-grid"
+                class="modal-grid"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= BOOKING MODAL ================= -->
+
+    <div
+        id="booking-modal"
+        class="modal hidden"
+    >
+
+        <div class="booking-box">
+
+            <h3>
+                Book This Decoration
+            </h3>
+
+            <p
+                id="booking-selected"
+                class="selected-decoration"
+            ></p>
+
+
+            <form id="booking-form">
+
+                <input
+                    type="text"
+                    id="b-name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="b-phone"
+                    placeholder="Phone Number"
+                    required
+                >
+
+                <input
+                    type="date"
+                    id="b-date"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="b-location"
+                    placeholder="Event Location"
+                    required
+                >
+
+                <textarea
+                    id="b-msg"
+                    placeholder="Message (optional)"
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    Send via WhatsApp
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="closeBooking()"
+                    class="cancel-button"
+                >
+                    Cancel
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="section">
+
+        <div class="contact-container">
+
+
+            <div class="contact-info fade-in">
+
+                <h2>
+                    Contact Us
+                </h2>
+
+                <div class="contact-details">
+
+                    <p>
+                        📞 +91 6281 143 168
+                    </p>
+
+                    <p
+                        onclick="openWhatsApp()"
+                        class="clickable"
+                    >
+                        💬 Chat on WhatsApp
+                    </p>
+
+                    <p
+                        onclick="openInstagram()"
+                        class="clickable"
+                    >
+                        📷 @nk_partys_and_balloons
+                    </p>
+
+                    <p
+                        onclick="openMaps()"
+                        class="clickable"
+                    >
+                        📍 NK Party's & Balloons, Osman Nagar Tellapur,
+                        RC Puram Sangareddy, Telangana
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-form-container fade-in">
+
+                <form id="contact-form">
+
+                    <input
+                        type="text"
+                        id="c-name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="tel"
+                        id="c-phone"
+                        placeholder="Phone Number"
+                        required
+                    >
+
+                    <textarea
+                        id="c-msg"
+                        placeholder="Your Message"
+                        required
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 NK Partys and Balloons. All rights reserved.
+        </p>
+
+        <p>
+            Designed by Datta Creations
+        </p>
+
+    </footer>
+
+
+    <!-- ================= FLOATING WHATSAPP ================= -->
+
+    <button
+        onclick="openWhatsApp()"
+        class="whatsapp-button"
+        aria-label="Chat on WhatsApp"
+    >
+
+        <svg
+            width="28"
+            height="28"
+            fill="white"
+            viewBox="0 0 24 24"
+        >
+
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.293-.18-2.886.857.756-2.764-.198-.313A8 8 0 1112 20z"/>
+
+        </svg>
+
+    </button>
+
+
+    <!-- Your JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
